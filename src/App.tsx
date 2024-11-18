@@ -7,8 +7,8 @@ import { Appointment, Appointments } from "./appointments";
 import { Photos } from "./photos";
 import type { Photo } from "react-photo-album";
 import PocketBase from "pocketbase";
-import { getImageDimensions } from "./dimensions";
-
+import { getImageDimensions, ImageDimensions } from "./dimensions";
+import { decode } from "./base64";
 class App extends React.Component<
 	{},
 	{
@@ -44,10 +44,14 @@ class App extends React.Component<
 		const code = window.location.pathname.split("/")[1];
 		if (!code) return this.notFound();
 
-		const decoded = atob(code);
-		const patientID = decoded.split(" ")[0];
-		const patientName = decoded.split(" ")[1];
-		let server = decoded.split(" ")[2];
+		console.log(code);
+
+		const decoded = decode(code);
+		const patientID = decoded.split("|")[0];
+		const patientName = decoded.split("|")[1];
+		let server = decoded.split("|")[2];
+
+		console.log(decoded);
 
 		if (!patientID || !patientName || !server) return this.notFound();
 
@@ -95,7 +99,10 @@ class App extends React.Component<
 					[] as string[]
 				)
 				.map(async (url) => {
-					const d = await getImageDimensions(url);
+					let d: ImageDimensions = { width: 1000, height: 1000 };
+					try {
+						d = await getImageDimensions(url);
+					} catch (_e) {}
 					return { src: url, width: d.width, height: d.height };
 				})
 		);
