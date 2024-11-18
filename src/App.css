@@ -1,0 +1,31 @@
+html {
+  background-color: #fafafa !important;
+}
+
+.app {
+  height: calc(100vh - 100px);
+  width: calc(100vw - 100px);
+  text-align: left;
+  padding: 20px;
+}
+
+footer {
+  padding: 5px;
+  text-align: center;
+  background: #607D8B;
+  margin: 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.react-tabs__tab-list {
+  margin-bottom: 0;
+}
+
+.react-tabs__tab-panel {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #bdbaba;
+  border-top: none;
+}
