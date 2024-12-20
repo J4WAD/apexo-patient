@@ -147,7 +147,7 @@ class App extends React.Component<
 						</Tabs>
 						<footer>
 							<p>For information and booking please call{this.state.phone}</p>
-							<i style={{fontSize: 12}}>Patient Viewer V1.2</i>
+							<i style={{fontSize: 12}}>Patient Viewer V1.3</i>
 						</footer>
 					</div>
 				) : (

@@ -1,31 +1,209 @@
 html {
-  background-color: #fafafa !important;
+	background-color: #f5f7fa !important;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f5f7fa;
 }
 
 .app {
-  height: calc(100vh - 100px);
-  width: calc(100vw - 100px);
-  text-align: left;
-  padding: 20px;
+	width: calc(100vw - 50px);
+	text-align: left;
+	padding: 30px 8px;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 9px;
+  margin-bottom: 9px;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+	border-radius: 12px;
+	background: white;
+}
+
+h3 {
+	text-align: center;
+	font-size: 22px;
 }
 
 footer {
-  padding: 5px;
-  text-align: center;
-  background: #607D8B;
-  margin: 20px;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 10px;
+	padding: 15px;
+	text-align: center;
+	background: linear-gradient(135deg, #607d8b00, #455a6412);
+	margin: 20px auto;
+	color: #4a4a4a;
+	font-size: 16px;
+	border-radius: 12px;
+	max-width: 1200px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease;
+}
+
+footer:hover {
+	transform: translateY(-2px);
 }
 
 .react-tabs__tab-list {
-  margin-bottom: 0;
+	margin-bottom: 0;
+	border-bottom: 2px solid #e0e0e0;
+	display: flex;
+	gap: 4px;
+}
+
+.react-tabs__tab {
+	padding: 12px 24px;
+	transition: all 0.2s ease;
+	border-radius: 8px 8px 0 0;
+}
+
+.react-tabs__tab--selected {
+	background: #1565c0;
+	color: white;
+	border: none;
 }
 
 .react-tabs__tab-panel {
-  background: #fff;
-  padding: 10px;
-  border: 1px solid #bdbaba;
-  border-top: none;
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #e0e0e0;
+	border-top: none;
+	border-radius: 0 0 8px 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+	.app {
+		width: calc(100vw - 50px);
+		padding: 15px;
+	}
+
+	footer {
+		margin: 10px;
+		font-size: 14px;
+	}
+
+	.react-tabs__tab-panel {
+		padding: 0;
+	}
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 15px 0 0;
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+th {
+	background: #eaeaea8c;
+	font-weight: 500;
+	padding: 12px 15px;
+	text-align: left;
+	border: 2px solid #dfdfdf;
+}
+
+td {
+	padding: 12px 15px;
+	border-bottom: 1px solid #e0e0e0 !important;
+}
+
+td:nth-child(3),
+td:nth-child(3),
+.responsiveTable td.pivoted:nth-child(3) {
+	border: 2px solid #ef3c2f42 !important;
+}
+
+td:nth-child(4),
+td:nth-child(4),
+.responsiveTable td.pivoted:nth-child(4) {
+	border: 2px solid rgb(4 83 142 / 25%) !important;
+}
+
+td:nth-child(5),
+td:nth-child(5),
+.responsiveTable td.pivoted:nth-child(5) {
+	border: 2px solid rgba(142, 75, 4, 0.25) !important;
+}
+
+tr:hover {
+	background-color: #f5f7fa;
+	transition: background-color 0.2s ease;
+}
+
+tr:last-child td {
+	border-bottom: none;
+}
+
+@media (max-width: 768px) {
+	table {
+		font-size: 14px;
+	}
+
+	th,
+	td {
+		padding: 8px 10px;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.responsiveTable tbody tr {
+		margin: 0.25em;
+		margin-bottom: 30px;
+		box-shadow: 1px 1px 7px -2px #00000026;
+		border-radius: 5px;
+		border: 1px solid #e3e3e3 !important;
+		padding: 7px 7px 3px;
+		border-left: 5px solid #1565c0 !important;
+	}
+}
+
+.react-tabs__tab-list {
+	margin-bottom: 0;
+	border-bottom: 2px solid #1565c0;
+	display: flex;
+	gap: 4px;
+}
+
+@media screen and (max-width: 40em) {
+	.responsiveTable td.pivoted {
+		/* border: none !important; */
+		position: relative;
+		padding-left: calc(50% + 10px) !important;
+		text-align: left !important;
+		white-space: pre-wrap;
+		overflow-wrap: break-word;
+		border-radius: 5px;
+		margin-bottom: 5px;
+		min-height: 21px;
+		border: 2px solid #eae9e9 !important;
+	}
+
+	.react-tabs__tab-panel {
+		border: none !important;
+		border-radius: none !important;
+		box-shadow: none !important;
+	}
+}
+
+.react-photo-album--image {
+	border-radius: 5px;
+}
+
+
+.react-tabs__tab {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+table td {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.react-tabs__tab:focus {
+  outline: 2px solid #1565c0;
+  outline-offset: 2px;
 }

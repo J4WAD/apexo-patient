@@ -1,6 +1,5 @@
 import React from "react";
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table";
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 
 export class Appointment {
 	id: string = "";
@@ -72,25 +71,15 @@ export class Appointments extends React.Component<{
 					{this.props.appointments.map((appointment, index) => {
 						return (
 							<Tr key={appointment.id}>
-								<Td style={{ padding: 4, backgroundColor: "rgba(0,0,0,0.1)" }}>
-									{index + 1}
-								</Td>
-								<Td style={{ padding: 4, backgroundColor: "rgba(0,0,0,0.2)" }}>
-									{appointment.formattedDate}
-								</Td>
-								<Td
-									style={{ padding: 4, backgroundColor: "rgba(255,0,0,0.1)" }}
-								>
+								<Td>{index + 1}</Td>
+								<Td>{appointment.formattedDate}</Td>
+								<Td>
 									{appointment.price} {this.props.currency}
 								</Td>
-								<Td
-									style={{ padding: 4, backgroundColor: "rgba(0,255,0,0.1)" }}
-								>
+								<Td>
 									{appointment.paid} {this.props.currency}
 								</Td>
-								<Td
-									style={{ padding: 4, backgroundColor: "rgba(0,0,255,0.2)" }}
-								>
+								<Td>
 									<ul>
 										{appointment.prescriptions.map((prescription) => {
 											return <li>{prescription}</li>;
@@ -104,7 +93,7 @@ export class Appointments extends React.Component<{
 				<Tbody>
 					<Td></Td>
 					<Td></Td>
-					<Td style={{ padding: 4, backgroundColor: "rgba(255,0,0,0.4)" }}>
+					<Td>
 						<b>Total cost</b>
 						<br />
 						<i>
@@ -115,7 +104,7 @@ export class Appointments extends React.Component<{
 							{this.props.currency}
 						</i>
 					</Td>
-					<Td style={{ padding: 4, backgroundColor: "rgba(0,255,0,0.4)" }}>
+					<Td>
 						<b>Total payments</b>
 						<br />
 						<i>
