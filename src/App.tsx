@@ -76,7 +76,7 @@ class App extends React.Component<
 			.map((item) => {
 				return new Appointment(
 					item.id,
-					new Date(item.date || ""),
+					new Date(item.date * 60 * 1000 || ""),
 					Number(item.price || ""),
 					Number(item.paid || ""),
 					item.prescriptions || []
