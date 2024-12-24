@@ -151,6 +151,10 @@ class App extends React.Component<
 								<a href={"tel:" + this.state.phone}>{this.state.phone}</a>
 							</p>
 							<i style={{ fontSize: 12 }}>Patient Viewer V1.3</i>
+							<br />
+							<a href="https://apexo.app">
+								<img src="https://apexo.app/assets/images/logo.png" width="75"/>
+							</a>
 						</footer>
 					</div>
 				) : (
