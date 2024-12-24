@@ -146,8 +146,11 @@ class App extends React.Component<
 							</TabPanel>
 						</Tabs>
 						<footer>
-							<p>For information and booking please call{this.state.phone}</p>
-							<i style={{fontSize: 12}}>Patient Viewer V1.3</i>
+							<p>
+								For information and booking please call:{" "}
+								<a href={"tel:" + this.state.phone}>{this.state.phone}</a>
+							</p>
+							<i style={{ fontSize: 12 }}>Patient Viewer V1.3</i>
 						</footer>
 					</div>
 				) : (
