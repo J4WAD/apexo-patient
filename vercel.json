@@ -1,0 +1,23 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/old-path",
+      "destination": "/new-path",
+      "permanent": true
+    },
+    {
+      "source": "/another-old-path",
+      "destination": "/another-new-path",
+      "permanent": false
+    }
+  ]
+}
