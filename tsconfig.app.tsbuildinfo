@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/appointments.tsx","./src/basic.tsx","./src/dimensions.ts","./src/main.tsx","./src/photos.tsx","./src/vite-env.d.ts"],"version":"5.6.3"}
+{"root":["./src/app.tsx","./src/appointments.tsx","./src/base64.ts","./src/basic.tsx","./src/dimensions.ts","./src/main.tsx","./src/photos.tsx","./src/vite-env.d.ts"],"version":"5.6.3"}
