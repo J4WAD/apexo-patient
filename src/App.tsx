@@ -152,7 +152,9 @@ class App extends React.Component<
               </p>
               <i style={{ fontSize: 12 }}>Patient Viewer V1.3</i>
               <br />
-              <a href="https://apexo.app"></a>
+              <a href="https://apexo.app">
+                <img src="" width="75" />
+              </a>
             </footer>
           </div>
         ) : (
