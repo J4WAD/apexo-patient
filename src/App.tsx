@@ -132,7 +132,7 @@ class App extends React.Component<
             <BasicInfo name={this.state.patientName} />
             <Tabs>
               <TabList>
-                <Tab>Appointments</Tab>
+                <Tab>Rendez-vous</Tab>
                 <Tab>Photos</Tab>
               </TabList>
               <TabPanel>
@@ -147,12 +147,12 @@ class App extends React.Component<
             </Tabs>
             <footer>
               <p>
-                For information and booking please call:{" "}
+                Pour information et réservation, veuillez appeler :{" "}
                 <a href={"tel:" + this.state.phone}>{this.state.phone}</a>
               </p>
-              <i style={{ fontSize: 12 }}>Patient Viewer V1.3</i>
+              <i style={{ fontSize: 12 }}>Dentisapp Portail Patients </i>
               <br />
-              <a href="https://apexo.app">
+              <a href="https://dentisapp.com">
                 <img src="" width="75" />
               </a>
             </footer>
