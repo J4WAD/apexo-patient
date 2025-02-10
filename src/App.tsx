@@ -150,10 +150,10 @@ class App extends React.Component<
                 Pour information et réservation, veuillez appeler :{" "}
                 <a href={"tel:" + this.state.phone}>{this.state.phone}</a>
               </p>
-              <i style={{ fontSize: 12 }}>Dentisapp Portail Patients </i>
+              <i style={{ fontSize: 12 }}>Portail Patient : Dentisapp </i>
               <br />
               <a href="https://dentisapp.com">
-                <img src="" width="75" />
+                <img src="public/images/logo.png" width="75" />
               </a>
             </footer>
           </div>
