@@ -153,7 +153,10 @@ class App extends React.Component<
               <i style={{ fontSize: 12 }}>Portail Patient : Dentisapp </i>
               <br />
               <a href="https://dentisapp.com">
-                <img src="public/images/logo.png" width="75" />
+                <img
+                  src="https://dentisapp.com/images/Logo-App.png"
+                  width="75"
+                />
               </a>
             </footer>
           </div>
